@@ -9,21 +9,14 @@
             background-attachment: fixed;
             background-position: center;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
             padding: 0;
-            overflow: auto;
+            overflow-y: scroll;
             text-align: center;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
         }
 
         .box {
@@ -32,8 +25,9 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
-            width: 200px;
-            max-width: 90%;
+            max-width: 80%;
+            width: 300px;
+            margin: 20px;
         }
 
         #img {
@@ -62,7 +56,6 @@
     </script>
 </head>
 <body>
-<div class="container">
     <h1>SHIDANGGG</h1>
     <div class="box">
         <img src="https://tenor.com/view/tkthao219-peach-goma-bubududu-gif-12751259943943295013.gif" alt="img 1" id="img">
@@ -88,6 +81,5 @@
         <img src="https://tenor.com/view/peach-goma-love-kiss-head-gif-9300439802251876272.gif" alt="img 6" id="img">
         <p>Wala nako masabi ackdksdskgskksksghs</p>
     </div>
-</div>
 </body>
 </html>
