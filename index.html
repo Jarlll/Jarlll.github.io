@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Norsida</title>
     <style>
         body {
@@ -70,35 +72,67 @@
           alert("I miss youu 😕");
         }
         function f6() {
-          alert("wala na talaga akong masabi,\n basta iloveyouuu hahahha");
-        }
+    var con = confirm("Do you want to change the gifs to frogs?");
+    if (con) {
+        changeImageSource(".img1", "https://tenor.com/view/frog-frog-love-heart-balloon-running-love-tiny-green-frog-gif-23224135.gif");
+        changeImageSource(".img2", "https://tenor.com/view/tiny-green-frog-frog-love-frog-heart-holding-heart-teeny-tiny-green-frog-gif-23224136.gif");
+        changeImageSource(".img3", "https://tenor.com/view/tiny-green-frog-teeny-tiny-green-frog-dancing-frog-music-frog-gif-23224139.gif");
+        changeImageSource(".img4", "https://tenor.com/view/frog-hearts-gif-12821856308347054158.gif");
+        changeImageSource(".img5", "https://tenor.com/view/tiny-green-frog-teeny-tiny-green-frog-throwing-a-fit-gif-23224141.gif");
+        changeImageSource(".img6", "https://tenor.com/view/tiny-green-frog-teeny-tiny-green-frog-frog-typing-angry-frog-gif-23224138.gif");
+        document.querySelector("h1").style.textShadow = "3px 3px 5px lightgreen";
+        document.body.style.backgroundImage = "url(https://tenor.com/view/love-you-gif-20747845.gif)";
+    } else {
+        changeImageSource(".img1", "https://tenor.com/view/tkthao219-peach-goma-bubududu-gif-12751259943943295013.gif");
+        changeImageSource(".img2", "https://tenor.com/view/cute-cat-gif-21406712.gif");
+        changeImageSource(".img3", "https://tenor.com/view/white-cute-cat-hearts-gif-25782905.gif");
+        changeImageSource(".img4", "https://tenor.com/view/peach-goma-love-pat-head-cheek-gif-11175741054448487684.gif");
+        changeImageSource(".img5", "https://tenor.com/view/peach-goma-crate-peach-gif-12840048120120565272.gif");
+        changeImageSource(".img6", "https://tenor.com/view/peach-goma-love-kiss-head-gif-9300439802251876272.gif");
+        document.querySelector("h1").style.textShadow = "3px 3px 5px pink";
+        document.body.style.backgroundImage = "url(https://tenor.com/view/transparent-hearts-heart-love-love-heart-gif-25422986.gif)";
+    }
+}
+
+function changeImageSource(className, newSrc) {
+    var elements = document.querySelectorAll(className);
+
+    if (elements.length > 0) {
+        elements.forEach(function (element) {
+            element.src = newSrc;
+        });
+    } else {
+        console.error("Elements with class '" + className + "' not found.");
+    }
+}
+
     </script>
 </head>
 <body>
     <h1>SHIDANGGG</h1>
     <div class="box" onclick="f1()">
-        <img src="https://tenor.com/view/tkthao219-peach-goma-bubududu-gif-12751259943943295013.gif" alt="img 1" id="img">
+        <img src="https://tenor.com/view/tkthao219-peach-goma-bubududu-gif-12751259943943295013.gif" alt="img 1" id="img" class="img1">
         <p>You're the only one I love, I promise</p>
     </div>
     <div class="box" onclick="f2()">
-        <img src="https://tenor.com/view/cute-cat-gif-21406712.gif" alt="img 2" id="img">
+        <img src="https://tenor.com/view/cute-cat-gif-21406712.gif" alt="img 2" id="img" class="img2">
         <p>You're cute just the way you are, don't be insecure about yourself</p>
     </div>
     <div class="box" onclick="f3()">
-        <img src="https://tenor.com/view/white-cute-cat-hearts-gif-25782905.gif" alt="img 3" id="img">
+        <img src="https://tenor.com/view/white-cute-cat-hearts-gif-25782905.gif" alt="img 3" id="img" class="img3">
         <p>I will always choose you no matter what happens</p>
     </div>
     <div class="box" onclick="f4()">
-        <img src="https://tenor.com/view/peach-goma-love-pat-head-cheek-gif-11175741054448487684.gif" alt="img 4" id="img">
+        <img src="https://tenor.com/view/peach-goma-love-pat-head-cheek-gif-11175741054448487684.gif" alt="img 4" id="img" class="img4">
         <p>Take care always, I love you so much</p>
     </div>
     <div class="box" onclick="f5()">
-        <img src="https://tenor.com/view/peach-goma-crate-peach-gif-12840048120120565272.gif" alt="img 5" id="img">
+        <img src="https://tenor.com/view/peach-goma-crate-peach-gif-12840048120120565272.gif" alt="img 5" id="img" class="img5">
         <p>I miss you, palambing please haha</p>
     </div>
     <div class="box" onclick="f6()">
-        <img src="https://tenor.com/view/peach-goma-love-kiss-head-gif-9300439802251876272.gif" alt="img 6" id="img">
-        <p>Wala nako masabi ackdksdskgskksksghs</p>
+        <img src="https://tenor.com/view/peach-goma-love-kiss-head-gif-9300439802251876272.gif" alt="img 6" id="img" class="img6">
+        <p>Wala nako masabi ackdksdskgskksksghs</p> <p style="color: lightgreen;">[Customize]</p>
     </div>
 </body>
 </html>
