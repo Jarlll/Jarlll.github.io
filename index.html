@@ -2,137 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport">
-    <title>Norsida</title>
-    <style>
-        body {
-            background-image: url(https://tenor.com/view/transparent-hearts-heart-love-love-heart-gif-25422986.gif);
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-            overflow-y: scroll;
-            text-align: center;
-        }
-
-        .box {
-            background-color: #fff;
-            border-radius: 80px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: center;
-            max-width: 500px;
-            max-height: 1000px;
-            margin: 20px;
-        }
-
-        #img {
-            height: 300px;
-            width: 300px;
-        }
-
-        p {
-            font-size: 25pt;
-            font-weight: bold;
-        }
-
-        h1 {
-            font-size: 50pt;
-            text-shadow: 3px 3px 5px pink;
-        }
-
-        .box:active {
-            background-color: pink;
-        }
-    </style>
-    <script>
-        alert("Hi, Norsida Myloves");
-        alert("I hope you're always fine");
-        alert("I love you so muchh");
-        alert("Takecare always, mwaaa!");
-        
-        function f1() {
-          alert("Promisee 🙋‍♂");
-        }
-        function f2() {
-          alert("Don't be insecure 😥");
-        }
-        function f3() {
-          alert("Only you 😽");
-        }
-        function f4() {
-          alert("Takecare 🤗");
-        }
-        function f5() {
-          alert("I miss youu 😕");
-        }
-        function f6() {
-    var con = confirm("Do you want to change the gifs to frogs?");
-    if (con) {
-        changeImageSource(".img1", "https://tenor.com/view/frog-frog-love-heart-balloon-running-love-tiny-green-frog-gif-23224135.gif");
-        changeImageSource(".img2", "https://tenor.com/view/tiny-green-frog-frog-love-frog-heart-holding-heart-teeny-tiny-green-frog-gif-23224136.gif");
-        changeImageSource(".img3", "https://tenor.com/view/tiny-green-frog-teeny-tiny-green-frog-dancing-frog-music-frog-gif-23224139.gif");
-        changeImageSource(".img4", "https://tenor.com/view/frog-hearts-gif-12821856308347054158.gif");
-        changeImageSource(".img5", "https://tenor.com/view/tiny-green-frog-teeny-tiny-green-frog-throwing-a-fit-gif-23224141.gif");
-        changeImageSource(".img6", "https://tenor.com/view/tiny-green-frog-teeny-tiny-green-frog-frog-typing-angry-frog-gif-23224138.gif");
-        document.querySelector("h1").style.textShadow = "3px 3px 5px lightgreen";
-        document.body.style.backgroundImage = "url(https://tenor.com/view/corazon-heart-coeur-love-amor-gif-16473481.gif)";
-    } else {
-        changeImageSource(".img1", "https://tenor.com/view/tkthao219-peach-goma-bubududu-gif-12751259943943295013.gif");
-        changeImageSource(".img2", "https://tenor.com/view/cute-cat-gif-21406712.gif");
-        changeImageSource(".img3", "https://tenor.com/view/white-cute-cat-hearts-gif-25782905.gif");
-        changeImageSource(".img4", "https://tenor.com/view/peach-goma-love-pat-head-cheek-gif-11175741054448487684.gif");
-        changeImageSource(".img5", "https://tenor.com/view/peach-goma-crate-peach-gif-12840048120120565272.gif");
-        changeImageSource(".img6", "https://tenor.com/view/peach-goma-love-kiss-head-gif-9300439802251876272.gif");
-        document.querySelector("h1").style.textShadow = "3px 3px 5px pink";
-        document.body.style.backgroundImage = "url(https://tenor.com/view/transparent-hearts-heart-love-love-heart-gif-25422986.gif)";
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shida</title>
+  <style type="text/css">
+    body {
+      background-color: pink;
     }
-}
-
-function changeImageSource(className, newSrc) {
-    var elements = document.querySelectorAll(className);
-
-    if (elements.length > 0) {
-        elements.forEach(function (element) {
-            element.src = newSrc;
-        });
-    } else {
-        console.error("Elements with class '" + className + "' not found.");
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
     }
-}
-
-    </script>
+    .custom-prompt {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease-in-out;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+    .close-button {
+      border-radius: 3px;
+      background-color: #007BFF;
+      color: white;
+      border: 1px solid gray;
+      padding: 5px 10px;
+      cursor: pointer;
+      float: right;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-    <h1>SHIDANGGG</h1>
-    <div class="box" onclick="f1()">
-        <img src="https://tenor.com/view/tkthao219-peach-goma-bubududu-gif-12751259943943295013.gif" alt="img 1" id="img" class="img1">
-        <p>You're the only one I love, I promise</p>
+  <div id="overlay" class="overlay">
+    <div id="prompt-1" class="custom-prompt">
+      <p>He missed you a lot,<br> hoping that you'll comeback</p>
+      <button class="close-button" onclick="next()">Next</button>
     </div>
-    <div class="box" onclick="f2()">
-        <img src="https://tenor.com/view/cute-cat-gif-21406712.gif" alt="img 2" id="img" class="img2">
-        <p>You're cute just the way you are, don't be insecure about yourself</p>
+  </div>
+  <div id="overlay-2" class="overlay">
+    <div id="prompt-2" class="custom-prompt">
+      <p>He left a message for you,<br> do you want to read it?</p>
+      <button class="close-button" onclick="no()">No</button>
+      <button class="close-button" onclick="yes()">Yes</button>
     </div>
-    <div class="box" onclick="f3()">
-        <img src="https://tenor.com/view/white-cute-cat-hearts-gif-25782905.gif" alt="img 3" id="img" class="img3">
-        <p>I will always choose you no matter what happens</p>
+  </div>
+  <div id="overlay-3" class="overlay">
+    <div id="prompt-3" class="custom-prompt">
+      <p>Hi <b>Shida</b>, nakakamove on na ako sa'yo pero sana bumalik ka. Kapag pakiramdam mo na walang tumatanggap sa'yo, sana maalala mo ako na tinatanggap ka ng buong-buo. Katulad ng sinabi ko dati, mahal kita maging sino ka man. Ayos lang din naman ako kahit hindi ka na bumalik, basta sa tuwing nararamdaman mo na wala kang kakampi sa mundo, wag kang mahihiyang lumapit sa'kin. Palagi kang may lugar dito sa puso ko na walang pwedeng pumalit. Sana bumalik yung closeness natin kasi namimiss na talaga kita. Handa na akong mag-settle as your friend na lang, kung 'yun ang kailangan para maging parte ulit ng buhay mo. Mahal, ayos lang sa akin kahit hindi na ako 'yung gusto mong makasama sa mga pangarap mo. Makita ko lang na masaya ka at nag-iimprove as a person, masaya na rin ako. Mag-iingat ka palagi, mahal. Malayo pa, pero malayo ka na. Nandito lang ako palagi, hindi mo man ramdam, pero tinatanaw pa rin kita. Mula sa malayo at tahimik na pumapalakpak sa mga narating mo sa buhay. <i>Palagi kang merong ako na proud sayo.</i></p>
     </div>
-    <div class="box" onclick="f4()">
-        <img src="https://tenor.com/view/peach-goma-love-pat-head-cheek-gif-11175741054448487684.gif" alt="img 4" id="img" class="img4">
-        <p>Take care always, I love you so much</p>
+  </div>
+  <div id="overlay-4" class="overlay">
+    <div id="prompt-4" class="custom-prompt">
+      <p>Ohh okay, sorry..</p>
     </div>
-    <div class="box" onclick="f5()">
-        <img src="https://tenor.com/view/peach-goma-crate-peach-gif-12840048120120565272.gif" alt="img 5" id="img" class="img5">
-        <p>I miss you, palambing please haha</p>
-    </div>
-    <div class="box" onclick="f6()">
-        <img src="https://tenor.com/view/peach-goma-love-kiss-head-gif-9300439802251876272.gif" alt="img 6" id="img" class="img6">
-        <p>Wala nako masabi ackdksdskgskksksghs</p> <p style="color: lightgreen;">[Customize]</p>
-    </div>
+  </div>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(showPrompt, 1000);
+    });
+
+    function showPrompt() {
+      document.getElementById('overlay').style.display = 'flex';
+      document.getElementById('prompt-1').style.display = 'block';
+    }
+
+    function showPrompt2() {
+      document.getElementById('overlay-2').style.display = 'flex';
+      document.getElementById('prompt-2').style.display = 'block';
+    }
+    
+    function showPrompt3() {
+      document.getElementById('overlay-3').style.display = 'flex';
+      document.getElementById('prompt-3').style.display = 'block';
+    }
+    
+    function showPrompt4() {
+      document.getElementById('overlay-4').style.display = 'flex';
+      document.getElementById('prompt-4').style.display = 'block';
+      setTimeout(function() {
+        window.close();
+      }, 1000);
+    }
+    
+    function next() {
+      document.getElementById('prompt-1').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+      setTimeout(showPrompt2, 300);
+    }
+
+    function no() {
+      document.getElementById('overlay-2').style.display = 'none';
+      document.getElementById('prompt-2').style.display = 'none';
+      setTimeout(showPrompt4, 300);
+    }
+
+    function yes() {
+      document.getElementById('overlay-2').style.display = 'none';
+      document.getElementById('prompt-2').style.display = 'none';
+      setTimeout(showPrompt3, 1000);
+    }
+  </script>
 </body>
 </html>
