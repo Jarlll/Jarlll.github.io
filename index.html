@@ -1,116 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shida</title>
-  <style type="text/css">
-    body {
-      background-color: pink;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-    }
-    .custom-prompt {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: opacity 0.3s ease-in-out;
-      margin-right: 20px;
-      margin-left: 20px;
-    }
-    .close-button {
-      border-radius: 3px;
-      background-color: #007BFF;
-      color: white;
-      border: 1px solid gray;
-      padding: 5px 10px;
-      cursor: pointer;
-      float: right;
-      margin-right: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY 3RD MONTHSARY MLOVE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('https://tenor.com/view/heart-gif-20168081.gif'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .collage-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Default 4 columns */
+            gap: 50px;
+            padding: 30px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-card {
+            position: relative;
+            transform: rotate(0deg);
+            transition: transform 0.5s ease;
+            text-align: center;
+            border: 2px solid #FFC0CB;
+            padding: 5px;
+            background-color: #fafafa;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            max-width: 100%;
+        }
+        
+        .photo-card:active {
+          background-color:#FFC0CB;
+        }
+
+        .photo-card img {
+            max-width: 100%; /* Image takes full width */
+            height: auto;
+            border: 1px solid #888;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-card p {
+    margin-top: 5px;
+    padding: 0px;
+    font-size: 3.5vw; /* Responsive font size based on viewport width */
+    color: #555;
+}
+
+
+        .photo-card:nth-child(odd) {
+            transform: rotate(-5deg);
+        }
+
+        .photo-card:nth-child(even) {
+            transform: rotate(5deg);
+        }
+
+        .photo-card:hover {
+            transform: rotate(0deg);
+        }
+
+        /* Popup overlay */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 250px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #popup-text {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* MEDIA QUERIES for responsiveness */
+
+        /* Medium screens (tablets, small laptops) */
+        @media (max-width: 1024px) {
+            .collage-container {
+                grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns */
+            }
+        }
+
+        /* Small screens (larger phones) */
+        @media (max-width: 768px) {
+            .collage-container {
+                grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+            }
+        }
+
+        /* Very small screens (small phones) */
+        @media (max-width: 480px) {
+            .collage-container {
+                grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns for small phones */
+                gap: 30px; /* Reduce gap for smaller screens */
+            }
+        }
+        
+        .collage-container .h {
+          color: #FFAAAA;
+          font-size: 9.2vw ;
+          font-weight: bold;
+          text-align: center;
+          transform: rotate(-5deg);
+        }
+    </style>
 </head>
 <body>
-  <div id="overlay" class="overlay">
-    <div id="prompt-1" class="custom-prompt">
-      <p>He missed you a lot,<br> hoping that you'll comeback</p>
-      <button class="close-button" onclick="next()">Next</button>
+    <div class="collage-container">
+      <h3 class="h"><br>I LOVE YOU ANN >//<</h3>
+        <div class="photo-card" data-text="I Love You always My Jovy Ann Monge ><" data-image="https://tenor.com/view/bugcat-capoo-gif-26623246.gif">
+            <img src="pic1.png" alt="Photo 1">
+            <p>Pic matapos gupitan haha ;v</p><p style="color:#FFC0CB"><i>10/9/24</i></p>
+        </div>
+        <div class="photo-card" data-text="No words can define how much I love you" data-image="https://tenor.com/view/bug-cat-tutu-bunny-cute-couple-gif-12631425650327001071.gif">
+            <img src="pic2.png" alt="Photo 2">
+            <p>Pa etuc us dito oh ><</p>
+            <p style="color:#FFC0CB"><i>20/8/24</i></p>
+        </div>
+        <div class="photo-card" data-text="Sorry for the times I raise my voice and hurt you, but know that I will always love you" data-image="https://tenor.com/view/capoo-cat-bug-gif-25910742.gif">
+            <img src="pic3.png" alt="Photo 3">
+            <p>Diko alam kung san to pero estetik</p>
+            <p style="color:#FFC0CB"><i>14/8/24</i></p>
+        </div>
+        <div class="photo-card" data-text="Thank you for always being there when Im down and all by myself" data-image="https://tenor.com/view/capoo-cat-bug-tulips-gif-25910741.gif">
+            <img src="pic4.png" alt="Photo 4">
+            <p>Giyummy us dito, sarap ;></p>
+            <p style="color:#FFC0CB"><i>14/8/24</i></p>
+        </div>
+        <div class="photo-card" data-text="I want you to know that you're enough and better, there's nothing wrong with you and if there is we will fix it together" data-image="https://tenor.com/view/love-bug-cat-capoo-cute-heart-gif-16792909.gif">
+            <img src="pic6.png" alt="Photo 5">
+            <p>Dito nmn boba kasama si net, saya natin dito</p>
+            <p style="color:#FFC0CB"><i>18/7/24</i></p>
+        </div>
+        <div class="photo-card" data-text="I want to grow old with you, I want to marry you, and I love you till the day that I die" data-image="https://tenor.com/view/bugcat-capoo-gif-13825525853124542433.gif">
+            <img src="pic5.png" alt="Photo 6">
+            <p>Dinalhan saglit ng gamot si ate ghurl</p>
+            <p style="color:#FFC0CB"><i>27/7/24</i></p>
+        </div>
+        <div class="photo-card" data-text="I have a lot of tampo sayo pero di nmn magbabago pagmamahal ko sayo " data-image="https://tenor.com/view/capoo-waiting-sitting-rocking-bugcat-gif-5561622596743617694.gif">
+            <img src="pic7.png" alt="Photo 7">
+            <p>no words needed ;></p>
+            <p style="color:#FFC0CB"><i>7/7/24</i></p>
+        </div>
+        <div class="photo-card" data-text="I know we have a diff problems lately and can you at least open to me so we can understand or help each other, Its unfair nmn na ako lng lagi nagoopen" data-image="https://tenor.com/view/cat-bugcat-bugcat-love-bugcat-heart-bugcat-capoo-gif-24836380.gif">
+            <img src="pic8.png" alt="Photo 8">
+            <p>hehe ;)</p>
+            <p style="color:#FFC0CB"><i>5/7/24</i></p>
+        </div>
+        <div class="photo-card" data-text="nagseselos, naiinis, nasasaktan ako pag may kalaro, kausap o kasama kang iba ;<" data-image="https://tenor.com/view/capoo-cat-love-gif-27401754.gif">
+            <img src="pic10.png" alt="Photo 9">
+            <p>HAHAHAHAHAHA</p>
+            <p style="color:#FFC0CB"><i>1/7/24</i></p>
+        </div>
+        <div class="photo-card" data-text="Im Speechless T-T" data-image="https://tenor.com/view/capoo-bugcat-cute-derp-gif-26565764.gif">
+            <img src="pic9.png" alt="Photo 10">
+            <p>Our 1st date and meet up, minumura mo pako dito haha >//<</p>
+            <p style="color:#FFC0CB"><i>1/7/24</i></p>
+        </div>
+      <h3 class="h"><br><br>\(⁠≧⁠▽⁠≦⁠)> Coquette</h3>
     </div>
-  </div>
-  <div id="overlay-2" class="overlay">
-    <div id="prompt-2" class="custom-prompt">
-      <p>He left a message for you,<br> do you want to read it?</p>
-      <button class="close-button" onclick="no()">No</button>
-      <button class="close-button" onclick="yes()">Yes</button>
+
+    <!-- Pop-up modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <p id="popup-text"></p>
+        </div>
     </div>
-  </div>
-  <div id="overlay-3" class="overlay">
-    <div id="prompt-3" class="custom-prompt">
-      <p>Hi <b>Shida</b>, nakakamove on na ako sa'yo pero sana bumalik ka. Kapag pakiramdam mo na walang tumatanggap sa'yo, sana maalala mo ako na tinatanggap ka ng buong-buo. Katulad ng sinabi ko dati, mahal kita maging sino ka man. Ayos lang din naman ako kahit hindi ka na bumalik, basta sa tuwing nararamdaman mo na wala kang kakampi sa mundo, wag kang mahihiyang lumapit sa'kin. Palagi kang may lugar dito sa puso ko na walang pwedeng pumalit. Sana bumalik yung closeness natin kasi namimiss na talaga kita. Handa na akong mag-settle as your friend na lang, kung 'yun ang kailangan para maging parte ulit ng buhay mo. Mahal, ayos lang sa akin kahit hindi na ako 'yung gusto mong makasama sa mga pangarap mo. Makita ko lang na masaya ka at nag-iimprove as a person, masaya na rin ako. Mag-iingat ka palagi, mahal. Malayo pa, pero malayo ka na. Nandito lang ako palagi, hindi mo man ramdam, pero tinatanaw pa rin kita. Mula sa malayo at tahimik na pumapalakpak sa mga narating mo sa buhay. <i>Palagi kang merong ako na proud sayo.</i></p>
-    </div>
-  </div>
-  <div id="overlay-4" class="overlay">
-    <div id="prompt-4" class="custom-prompt">
-      <p>Ohh okay, sorry..</p>
-    </div>
-  </div>
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-      setTimeout(showPrompt, 1000);
-    });
 
-    function showPrompt() {
-      document.getElementById('overlay').style.display = 'flex';
-      document.getElementById('prompt-1').style.display = 'block';
-    }
+    <script>
+        const photoCards = document.querySelectorAll('.photo-card');
+        const popup = document.getElementById('popup');
+        const popupText = document.getElementById('popup-text');
+        const closeBtn = document.querySelector('.close-btn');
 
-    function showPrompt2() {
-      document.getElementById('overlay-2').style.display = 'flex';
-      document.getElementById('prompt-2').style.display = 'block';
-    }
-    
-    function showPrompt3() {
-      document.getElementById('overlay-3').style.display = 'flex';
-      document.getElementById('prompt-3').style.display = 'block';
-    }
-    
-    function showPrompt4() {
-      document.getElementById('overlay-4').style.display = 'flex';
-      document.getElementById('prompt-4').style.display = 'block';
-      setTimeout(function() {
-        window.close();
-      }, 1000);
-    }
-    
-    function next() {
-      document.getElementById('prompt-1').style.display = 'none';
-      document.getElementById('overlay').style.display = 'none';
-      setTimeout(showPrompt2, 300);
-    }
+        photoCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const text = card.getAttribute('data-text');
+                const imageSrc = card.getAttribute('data-image');
+                
+                popupText.innerHTML = `<img src="${imageSrc}" alt="Popup Image" style="max-width: 100%; height: auto;"><br>${text}`;
+                popup.style.display = 'flex'; 
+            });
+        });
 
-    function no() {
-      document.getElementById('overlay-2').style.display = 'none';
-      document.getElementById('prompt-2').style.display = 'none';
-      setTimeout(showPrompt4, 300);
-    }
+        closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
 
-    function yes() {
-      document.getElementById('overlay-2').style.display = 'none';
-      document.getElementById('prompt-2').style.display = 'none';
-      setTimeout(showPrompt3, 1000);
-    }
-  </script>
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
